@@ -6,6 +6,7 @@ import { AiFillGithub } from "react-icons/ai";
 import { BsLinkedin } from "react-icons/bs";
 import { BsDownload } from "react-icons/bs";
 import { MdMail } from "react-icons/md";
+import Projets from "@/components/Projets";
 export default function Home() {
   return (
     <>
@@ -32,13 +33,13 @@ export default function Home() {
                 </span>
                 Linkdin
               </div>
-              <div className="btn-reverse">
+              <div className="btn">
                 <span className="logo-btn">
                   <BsDownload />
                 </span>
                 Download CV
               </div>
-              <div className="btn-reverse">
+              <div className="btn">
                 <span className="logo-btn">
                   <MdMail />
                 </span>
@@ -50,9 +51,7 @@ export default function Home() {
         </section>
         <BackgroundBeams />
       </div>
-      <div className="projets">
-        <h1>SECTION PROJET</h1>
-      </div>
+      <Projets/>
     </>
   );
 }

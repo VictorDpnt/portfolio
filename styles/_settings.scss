@@ -1,0 +1,23 @@
+:root {
+  --bg: #0b161a;
+  --Fond-subtil: #101b20;
+  --Fond-element-interface-utilisateur: #082c36;
+  --element-interface-hover: #082c36;
+  --Bordures-subtils: #045468;
+  --Bordures-pas-subtil: #12677e;
+  --bordure-hover: #11809c;
+  --Arriere-plans-solides-survole: #23afd0;
+  --text-subtil: #4ccce6;
+  --text: #b6ecf7;
+}
+
+body {
+  overflow-x: hidden;
+  height: 500vh;
+
+  background: linear-gradient(
+    0deg,
+    rgba(11, 22, 26, 1) 0%,
+    rgba(8, 44, 54, 1) 80%
+  );
+}

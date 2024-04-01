@@ -1,0 +1,19 @@
+.projets {
+  width: 100vw;
+  height: 80vh;
+  /* background-color: whitesmoke; */
+
+  .cards-container {
+    position: relative;
+    width: max-content;
+    width: 500px;
+
+    .test {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--bg);
+    }
+  }
+}
