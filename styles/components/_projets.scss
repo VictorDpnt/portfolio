@@ -1,19 +1,131 @@
 .projets {
   width: 100vw;
-  height: 80vh;
-  /* background-color: whitesmoke; */
+  height: 60vh;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 200px;
+  align-items: center;
 
   .cards-container {
     position: relative;
     width: max-content;
-    width: 500px;
+    width: 400px;
+    height: 200px;
+    margin: 6px;
+    cursor: pointer;
+    border-radius: 14px;
 
-    .test {
+    .card {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       background-color: var(--bg);
+      color: aliceblue;
+      border-radius: 14px;
+      border: solid var(--Bordures-subtils) 1px;
+      transition: 0.2s;
+
+      &:hover {
+        border: solid var(--bordure-hover) 1px;
+      }
+
+      .img-cards {
+        width: 100%;
+        height: 100%;
+        transition: 0.2s;
+
+        &.active {
+          filter: blur(6px) brightness(20%);
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: top;
+        }
+      }
+
+      .hover {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        padding: 5px;
+        transition: 0.2s;
+
+        .logo-card {
+          display: flex;
+          justify-content: space-around;
+          font-size: 2rem;
+          width: 50%;
+        }
+
+        p {
+          font-size: 0.9rem;
+          animation: description 0.4s ease;
+          padding: 3px;
+
+          @keyframes description {
+            0% {
+              transform: translateX(-50px);
+            }
+            100% {
+              transform: translateX(0px);
+            }
+          }
+        }
+      }
+    }
+
+    .title-link {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 10px;
+      color: var(--text);
+
+      img {
+        width: 30px;
+        filter: invert(90%);
+        margin-right: 10px;
+      }
+
+      h1 {
+        color: var(--text);
+        font-size: 1.2rem;
+        font-weight: bold;
+        transition: 0.1s;
+        margin-right: 30px;
+
+        &:hover {
+          color: var(--text-subtil);
+        }
+      }
+
+      .link {
+        display: flex;
+
+        button {
+          display: flex;
+          align-items: center;
+          margin-right: 20px;
+          background-color: var(--bg);
+          border: solid 1px var(--Bordures-pas-subtil);
+          border-radius: 10px;
+          padding: 0 5px;
+          font-size: 0.9rem;
+          transition: 0.2s;
+
+          &:hover {
+            background-color: var(--element-interface-hover);
+            border: solid 1px var(--bordure-hover);
+          }
+        }
+      }
     }
   }
 }

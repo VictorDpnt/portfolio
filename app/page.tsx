@@ -1,16 +1,16 @@
 "use client";
 import React from "react";
 import { BackgroundBeams } from "../components/ui/background-beams";
-import { Badge } from "@/components/ui/badge";
 import { AiFillGithub } from "react-icons/ai";
 import { BsLinkedin } from "react-icons/bs";
 import { BsDownload } from "react-icons/bs";
 import { MdMail } from "react-icons/md";
 import Projets from "@/components/Projets";
+import Experiences from "@/components/Experiences";
 export default function Home() {
   return (
     <>
-      <div className="h-[55rem] w-full  relative  ">
+      <div className="h-[58rem] w-full  relative  ">
         <section className="about">
           <div className="container">
             <h6>Hey ! I'm-</h6>
@@ -51,7 +51,9 @@ export default function Home() {
         </section>
         <BackgroundBeams />
       </div>
-      <Projets/>
+      <div className="title-section">My Projects</div>
+      <Projets />
+      <Experiences />
     </>
   );
 }
