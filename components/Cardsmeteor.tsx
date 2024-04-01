@@ -4,6 +4,7 @@ import { SiRedux } from "react-icons/si";
 import { DiSass } from "react-icons/di";
 import { FaRegEye } from "react-icons/fa6";
 import { IoLogoGithub } from "react-icons/io";
+import Points from "./Points";
 
 export function MeteorsDemo({ projet }) {
   const [overCard, letOverCard] = useState(false);
@@ -42,7 +43,7 @@ export function MeteorsDemo({ projet }) {
       </a>
 
       <div className="title-link">
-        <img src="/images/téléchargement.svg" alt="" />{" "}
+        <Points />
         <a href={projet.link} target="_blank">
           <h1>{projet.title}</h1>
         </a>

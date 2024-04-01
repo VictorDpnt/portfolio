@@ -1,0 +1,56 @@
+.point-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 20px;
+  justify-items: center;
+  align-items: center;
+  margin-right: 5px;
+
+  span {
+    font-size: 10px;
+    text-align: center;
+    padding-bottom: -10px;
+    color: var(--text);
+  }
+
+  .line-1 {
+    animation: shin 2s ease-in-out infinite;
+    display: block;
+
+    @keyframes shin {
+      0% {
+        filter: brightness(100%);
+      }
+      100% {
+        filter: brightness(50%);
+        box-shadow: 1 1 100px var(--text);
+      }
+    }
+  }
+  .line-2 {
+    animation: shin 2s ease-in-out infinite;
+    animation-delay: 0.5s;
+
+    @keyframes shin {
+      0% {
+        filter: brightness(100%);
+      }
+      100% {
+        filter: brightness(50%);
+      }
+    }
+  }
+  .line-3 {
+    animation: shin 2s ease-in-out infinite;
+    animation-delay: 1s;
+
+    @keyframes shin {
+      0% {
+        filter: brightness(100%);
+      }
+      100% {
+        filter: brightness(50%);
+      }
+    }
+  }
+}

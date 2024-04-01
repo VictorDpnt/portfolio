@@ -53,7 +53,13 @@ export default function Home() {
       </div>
       <div className="title-section">My Projects</div>
       <Projets />
-      <Experiences />
+      <div className="experience">
+        <div className="experience-center">
+          <Experiences />
+          <Experiences />
+          <Experiences />
+        </div>
+      </div>
     </>
   );
 }

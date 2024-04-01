@@ -1,20 +1,113 @@
-.experiences-container {
-  height: 60vh;
+.experience {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  margin-top: 50px;
-
-  .card-contain {
+  .experience-center {
     display: flex;
-    justify-content: center;
+    width: 70%;
+    justify-content: space-around;
     align-items: center;
-  }
 
-  .card {
-    background-color: var(--Fond-subtil);
-    border: solid 1px var(--Bordures-pas-subtil);
+    .experiences-container {
+      height: 100%;
 
-    &:hover {
-      border: solid 1px var(--bordure-hover);
+      margin-top: 30px;
+
+      .card-contain {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .card-password {
+        background-color: var(--Fond-subtil);
+        border: solid 1px var(--Bordures-pas-subtil);
+        color: var(--text);
+        border-radius: 10px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 310px;
+
+        &:hover {
+          border: solid 1px var(--bordure-hover);
+        }
+
+        h1 {
+          font-size: 1.2rem;
+        }
+
+        .range-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 20px 0;
+          input[type="range"] {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 160px;
+            background: var(--Arriere-plans-solides-survole);
+            border-radius: 50px;
+            height: 8px;
+          }
+
+          .value-range {
+            margin-left: 10px;
+          }
+        }
+
+        .choice-btn {
+          button {
+            margin: 0 5px;
+          }
+        }
+        .btn-generate {
+          margin-top: 20px;
+          padding: 5px;
+          background-color: var(--bg);
+          border-radius: 10px;
+          border: solid 1px var(--Bordures-pas-subtil);
+          transition: 0.2s;
+
+          &:hover {
+            background-color: var(--element-interface-hover);
+            border: solid 1px var(--bordure-hover);
+          }
+        }
+
+        .container-result {
+          position: relative;
+          width: 100%;
+          height: 40px;
+          margin-top: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .the-password {
+          }
+
+          .copy-logo {
+            cursor: pointer;
+            position: absolute;
+            top: -15px;
+            right: 1px;
+            padding: 3px;
+            transition: 0.2s;
+            border-radius: 3px;
+            border: solid 0px var(--Bordures-pas-subtil);
+
+            &:hover {
+              background-color: var(--element-interface-hover);
+              border: solid 1px var(--Bordures-pas-subtil);
+            }
+          }
+        }
+      }
     }
   }
 }
