@@ -11,7 +11,7 @@ export function MeteorsDemo({ projet }) {
   return (
     <div className="cards-container">
       <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.80] bg-red-500  blur-3xl" />
-      <a href={projet.link}>
+      <a href={projet.link} target="_blank">
         <div className=" card relative shadow-xl   h-full overflow-hidden  flex flex-col justify-end items-start">
           <div
             className={overCard ? "img-cards active" : "img-cards"}
@@ -43,16 +43,16 @@ export function MeteorsDemo({ projet }) {
 
       <div className="title-link">
         <img src="/images/téléchargement.svg" alt="" />{" "}
-        <a href={projet.link}>
+        <a href={projet.link} target="_blank">
           <h1>{projet.title}</h1>
         </a>
         <div className="link">
-          <a href={projet.link}>
+          <a href={projet.link} target="_blank">
             <button>
               <FaRegEye className="mr-2 size-5" /> Explore
             </button>
           </a>
-          <a href={projet.linkGithub}>
+          <a href={projet.linkGithub} target="_blank">
             <button>
               <IoLogoGithub className="mr-2 size-5" /> GitHub
             </button>

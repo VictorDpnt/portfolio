@@ -1,0 +1,20 @@
+.experiences-container {
+  height: 60vh;
+
+  margin-top: 50px;
+
+  .card-contain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    background-color: var(--Fond-subtil);
+    border: solid 1px var(--Bordures-pas-subtil);
+
+    &:hover {
+      border: solid 1px var(--bordure-hover);
+    }
+  }
+}

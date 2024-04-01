@@ -1,9 +1,11 @@
 import React from "react";
+import { Card } from "./ui/card-hover-effect";
+import { CardHoverEffectDemo } from "./Cardshover";
 
 const Experiences = () => {
   return (
     <div className="experiences-container">
-      <h1>test</h1>
+      <CardHoverEffectDemo />
     </div>
   );
 };
