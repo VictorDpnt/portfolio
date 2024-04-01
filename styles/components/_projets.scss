@@ -2,16 +2,16 @@
   width: 100vw;
   height: 60vh;
   display: flex;
-  justify-content: space-around;
-  padding: 0 200px;
+  justify-content: center;
   align-items: center;
 
   .cards-container {
     position: relative;
     width: max-content;
+    margin: 7px;
     width: 400px;
     height: 200px;
-    margin: 6px;
+
     cursor: pointer;
     border-radius: 14px;
 
