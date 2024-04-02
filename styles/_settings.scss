@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Noto%20Sans%20Adlam:700|Noto%20Sans%20Adlam:400");
+@import url("https://fonts.googleapis.com/css?family=Fredoka:700|Fredoka:400");
+
 :root {
   --bg: #0b161a;
   --Fond-subtil: #101b20;
@@ -11,6 +14,10 @@
   --text: #b6ecf7;
 }
 
+* {
+  font-family: "Fredoka";
+  font-weight: 400;
+}
 body {
   overflow-x: hidden;
   height: 500vh;

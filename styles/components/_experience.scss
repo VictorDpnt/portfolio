@@ -13,9 +13,6 @@
 
     .experiences-container {
       height: 100%;
-
-      margin-top: 30px;
-
       .card-contain {
         display: flex;
         justify-content: center;
@@ -33,9 +30,15 @@
         justify-content: flex-start;
         align-items: center;
         height: 310px;
+        width: 320px;
+        position: relative;
 
         &:hover {
           border: solid 1px var(--bordure-hover);
+        }
+
+        .shadow {
+          z-index: -1;
         }
 
         h1 {

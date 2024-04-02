@@ -6,7 +6,10 @@ import { BsLinkedin } from "react-icons/bs";
 import { BsDownload } from "react-icons/bs";
 import { MdMail } from "react-icons/md";
 import Projets from "@/components/Projets";
-import Experiences from "@/components/Experiences";
+import ExpPassWord from "@/components/ExpPassWord";
+import Chifumi from "@/components/Chifumi";
+import BubbleShooter from "@/components/BubbleShooter";
+
 export default function Home() {
   return (
     <>
@@ -55,9 +58,9 @@ export default function Home() {
       <Projets />
       <div className="experience">
         <div className="experience-center">
-          <Experiences />
-          <Experiences />
-          <Experiences />
+          <ExpPassWord />
+          <Chifumi />
+          <BubbleShooter />
         </div>
       </div>
     </>

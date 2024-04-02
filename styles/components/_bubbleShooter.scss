@@ -1,0 +1,37 @@
+.container.buble {
+}
+.game-window {
+  width: 100%;
+  height: 70vh;
+  border: 1px solid white;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+
+  .bubble {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50px;
+    position: absolute;
+
+    animation: anim 9s forwards;
+
+    @keyframes anim {
+      0% {
+        bottom: 5%;
+        left: 10%;
+        opacity: 1;
+        filter: hue-rotate(720deg);
+      }
+      100% {
+        bottom: 110%;
+        left: 30%;
+        opacity: 1;
+        filter: hue-rotate(720deg);
+      }
+    }
+  }
+}

@@ -1,0 +1,81 @@
+.game-container {
+  position: relative;
+  width: 320px;
+  height: 310px;
+  background-color: var(--Fond-subtil);
+  border: solid 1px var(--Bordures-pas-subtil);
+  border-radius: 10px;
+  color: aliceblue;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--text);
+
+  &:hover {
+    border: solid 1px var(--bordure-hover);
+  }
+
+  .shadow {
+    z-index: -1;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px auto;
+
+    button {
+      border: solid 1px var(--Bordures-pas-subtil);
+      padding: 5px;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      transition: 0.1s;
+
+      &:hover {
+        background-color: var(--element-interface-hover);
+        border: solid 1px var(--bordure-hover);
+      }
+    }
+  }
+
+  .computer {
+    margin-bottom: 20px;
+  }
+
+  .result {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    height: 30px;
+  }
+
+  .score {
+    margin-top: 30px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .reset {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.3rem;
+    padding: 3px;
+    transition: 0.2s;
+    border-radius: 3px;
+    border: solid 0px var(--Bordures-pas-subtil);
+    transition: 0.2s;
+
+    &:hover {
+      background-color: var(--element-interface-hover);
+      border: solid 1px var(--Bordures-pas-subtil);
+    }
+  }
+}

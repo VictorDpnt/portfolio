@@ -4,7 +4,7 @@ import { PiCopyDuotone } from "react-icons/pi";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { BsCheckAll } from "react-icons/bs";
 
-const Experiences = () => {
+const ExpPassWord = () => {
   const [valueRange, setValueRange] = useState("15");
   const [btnMin, setBtnMin] = useState(true);
   const [btnMaj, setBtnMaj] = useState(false);
@@ -53,6 +53,7 @@ const Experiences = () => {
     <div className="experiences-container">
       <div className="card-contain">
         <div className="card-password">
+          <div className=" shadow absolute inset-0 h-full w-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.70] bg-red-500  blur-3xl " />
           <h1>Password Generator</h1>
           <div className="range-container">
             <input
@@ -116,4 +117,4 @@ const Experiences = () => {
   );
 };
 
-export default Experiences;
+export default ExpPassWord;
