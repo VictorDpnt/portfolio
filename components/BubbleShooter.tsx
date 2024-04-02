@@ -14,48 +14,88 @@ import {
 const BubbleShooter: React.FC = () => {
   const [messages, setMessages] = useState<JSX.Element[]>([]);
   const [isScrolling, setIsScrolling] = useState<boolean>(false);
-  const [shoot, setShoot] = useState(true);
+  const [score, setScore] = useState(0);
+  const [key, setKey] = useState(0);
 
   useEffect(() => {
     let interval: NodeJS.Timeout;
+
     if (isScrolling) {
       interval = setInterval(() => {
         setMessages((prevMessages) => [
           ...prevMessages,
-          <span className="bubble"></span>,
+          <span key={key} className="bubble"></span>,
         ]);
-      }, 500);
+      }, 600);
+    } else {
+      clearInterval(interval); // Arrêter l'intervalle si le défilement est désactivé
     }
+
+    return () => clearInterval(interval); // Nettoyer l'intervalle lors du démontage du composant
   }, [isScrolling]);
+
+  const keyMaker = () => {
+    const interval = setInterval(() => {
+      setKey((prevKey) => prevKey + 1);
+    }, 600); // 600 millisecondes = 0.6 seconde
+
+    // Retourne une fonction de nettoyage pour arrêter l'intervalle lorsque le composant est démonté
+    return () => clearInterval(interval);
+  };
+
+  const resetMessages = () => {
+    setMessages([]);
+  };
+
+  const removeMessage = (indexToRemove: number) => {
+    setMessages((prevMessages) =>
+      prevMessages.filter((_, index) => index !== indexToRemove)
+    );
+  };
+
+  const calcScore = () => {
+    setScore(score + 1);
+  };
+
+  console.log(key);
 
   return (
     <div className="container.bubble">
       <AlertDialog>
         <AlertDialogTrigger>
-          <span onClick={() => setIsScrolling(true)}>Open</span>
+          <span
+            onClick={() => {
+              setIsScrolling(true);
+              keyMaker();
+            }}
+          >
+            Open
+          </span>
         </AlertDialogTrigger>
         <AlertDialogContent>
           <div className="game-window">
-            <h3 className="score">0</h3>
+            <h3 className="score">{score}</h3>
             <div>
-              {messages
-                .filter((bulle, index) => {
-                  if (shoot) {
-                    return bulle;
-                  }
-                })
-                .map((message, index) => (
-                  <span
-                    key={index}
-                    className="bubble"
-                    onClick={() => setShoot(false)}
-                  >
-                    {message}
-                  </span>
-                ))}
+              {messages.map((message, index) => (
+                <span
+                  key={index}
+                  onClick={() => {
+                    removeMessage(index);
+                    calcScore();
+                  }}
+                >
+                  {message}
+                </span>
+              ))}
             </div>
           </div>
-          <AlertDialogCancel onClick={() => setIsScrolling(false)}>
+          <AlertDialogCancel
+            onClick={() => {
+              setIsScrolling(false);
+              resetMessages();
+              setScore(0);
+            }}
+          >
             Close
           </AlertDialogCancel>
         </AlertDialogContent>
