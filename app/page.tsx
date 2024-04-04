@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { BackgroundBeams } from "../components/ui/background-beams";
 import { AiFillGithub } from "react-icons/ai";
 import { BsLinkedin } from "react-icons/bs";
@@ -8,14 +8,33 @@ import { MdMail } from "react-icons/md";
 import Projets from "@/components/Projets";
 import ExpPassWord from "@/components/ExpPassWord";
 import Chifumi from "@/components/Chifumi";
-import BubbleShooter from "@/components/BubbleShooter";
 import Skills from "@/components/Skills";
-import MainPoints from "@/components/MainPoints";
+import Navbar from "@/components/Navbar";
+
+
 
 export default function Home() {
+
+  useEffect(() => {
+  
+    const handleScroll = () => {
+     
+      const scrollTop: number = window.scrollY || document.documentElement.scrollTop;
+      console.log(scrollTop);
+    };
+
+   
+    window.addEventListener('scroll', handleScroll);
+
+   
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
     <>
       <div className="h-[58rem] w-full  relative  ">
+        <Navbar/>
         <section className="about">
           <div className="container">
             {/* <MainPoints/> */}
