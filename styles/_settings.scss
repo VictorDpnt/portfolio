@@ -30,8 +30,11 @@ body {
 }
 
 .title-section {
-  margin-bottom: -100px;
+  margin-bottom: -40px;
   text-align: center;
   color: var(--text-subtil);
   font-size: 3rem;
+  text-shadow: 1px 1px 5px #23afd0;
+  // text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+  //   1px 1px 0 #000;
 }

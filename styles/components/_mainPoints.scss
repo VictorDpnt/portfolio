@@ -1,0 +1,17 @@
+.main-points-container {
+  z-index: -1;
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  top: -40px;
+  left: -40px;
+  width: 100px;
+  height: 100px;
+  opacity: 0.4;
+
+  span {
+    margin: -8px;
+    color: var(--text-subtil);
+  }
+}

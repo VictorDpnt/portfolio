@@ -62,6 +62,45 @@
           justify-content: space-around;
           font-size: 2rem;
           width: 50%;
+
+          .logo-1 {
+            animation: display 0.2s ease;
+
+            @keyframes display {
+              0% {
+                transform: translateY(-50px);
+              }
+              100% {
+                transform: translateY(0px);
+              }
+            }
+          }
+
+          .logo-2 {
+            animation: display 0.3s ease;
+
+            @keyframes display {
+              0% {
+                transform: translateY(-50px);
+              }
+              100% {
+                transform: translateY(0px);
+              }
+            }
+          }
+
+          .logo-3 {
+            animation: display 0.4s ease;
+
+            @keyframes display {
+              0% {
+                transform: translateY(-50px);
+              }
+              100% {
+                transform: translateY(0px);
+              }
+            }
+          }
         }
 
         p {

@@ -29,15 +29,15 @@ export function MeteorsDemo({ projet }) {
               onMouseLeave={() => letOverCard(false)}
             >
               <div className="logo-card">
-                <GrReactjs />
-                <SiRedux />
-                <DiSass />
+                <GrReactjs className="logo-1" />
+                <SiRedux className="logo-2" />
+                <DiSass className="logo-3" />
               </div>
               <p>{projet.description}</p>
             </div>
           )}
 
-          {/* Meaty part - Meteor effect */}
+          
           {/* <Meteors number={20} /> */}
         </div>
       </a>

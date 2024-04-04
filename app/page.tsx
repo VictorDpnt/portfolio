@@ -9,6 +9,8 @@ import Projets from "@/components/Projets";
 import ExpPassWord from "@/components/ExpPassWord";
 import Chifumi from "@/components/Chifumi";
 import BubbleShooter from "@/components/BubbleShooter";
+import Skills from "@/components/Skills";
+import MainPoints from "@/components/MainPoints";
 
 export default function Home() {
   return (
@@ -16,6 +18,7 @@ export default function Home() {
       <div className="h-[58rem] w-full  relative  ">
         <section className="about">
           <div className="container">
+            {/* <MainPoints/> */}
             <h6>Hey ! I'm-</h6>
             <h1>Victor Dupont</h1>
             <p>
@@ -50,19 +53,27 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="picture"></div>
+          <div className="container-picture">
+            <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.80] bg-red-500  blur-3xl" />
+            <div className="picture"></div>
+            {/* <img src="" alt="" className="photo" /> */}
+          </div>
         </section>
         <BackgroundBeams />
       </div>
-      <div className="title-section">My Projects</div>
+      <div className="title-section">Main Projects</div>
       <Projets />
-      <div className="experience">
+      <div className="title-section">Projects</div>
+      <div className="experience"> 
         <div className="experience-center">
           <ExpPassWord />
           <Chifumi />
-          <BubbleShooter />
+          {/* <BubbleShooter /> */}
         </div>
       </div>
+      <div className="title-section">Skills</div>
+      <Skills/>
+      <div className="title-section ">Contact</div>
     </>
   );
 }
