@@ -6,7 +6,7 @@ const Projets = () => {
     {
       title: "MEDIAMOVIE",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae repellendus ipsam ea magnam. Exercitationem laudantium, adipisci ipsum voluptate nihil, magni quibusdam reprehenderit quod rem alias vel suscipit hic sequi commodi!",
+        "Destination pour tout ce qui concerne le monde du cinéma et des séries ! Découvrez des informations complètes, les plateformes de diffusion, des bandes-annonces, ainsi que des recommandations de titres similaires. Incluant également un système de favoris.",
       img: "/images/mediamovie.png",
       link: "https://media-movie-app.netlify.app/",
       linkGithub: "https://github.com/VictorDpnt/MOVIE-APP",
@@ -14,7 +14,7 @@ const Projets = () => {
     {
       title: "CryptoWatch",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae repellendus ipsam ea magnam. Exercitationem laudantium, adipisci ipsum voluptate nihil, magni quibusdam reprehenderit quod rem alias vel suscipit hic sequi commodi!",
+        "Explorez une liste complète des crypto-actifs les plus importants, accompagnée de graphiques détaillés sur leur évolution, tout en bénéficiant d'un système d'affichage personnalisé. ",
       img: "/images/crypto.PNG",
       link: "https://cryptowatch-analyzer.netlify.app/",
       linkGithub: "https://github.com/VictorDpnt/Crypto-APP",

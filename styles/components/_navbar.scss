@@ -12,6 +12,10 @@
     scale: 0;
     opacity: 0;
     transition: 0.2s;
+    background-color: var(--bg);
+    padding: 5px;
+    padding-left: 30px;
+    border-radius: 10px;
 
     &.active {
       scale: 1;
@@ -68,9 +72,11 @@
     @keyframes bright {
       0% {
         filter: brightness(200%);
+        scale: 1;
         text-shadow: 0px 0px 1px var(--text);
       }
       100% {
+        scale: 0.6;
         filter: brightness(100%);
       }
     }
