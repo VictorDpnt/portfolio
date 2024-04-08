@@ -46,7 +46,7 @@ const ExpPassWord = () => {
     }
 
     setPassword(newPassword);
-    console.log(password);
+   
   };
 
   return (

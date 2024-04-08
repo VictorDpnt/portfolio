@@ -16,12 +16,12 @@ const Skills = () => {
 
   return (
     <div className="skils">
-   <div className="title-containt"> <h2>
+   {/* <div className="title-containt"> <h2>
       DEV
     </h2>
     <h2>
       DESIGN
-    </h2></div>
+    </h2></div> */}
       <div className='skills-container'>
       
       <div className="dev">
@@ -32,13 +32,14 @@ const Skills = () => {
         <Badge logo={<SiNextdotjs />} theme={"grey"} title={"Next.js"}/>
         <Badge logo={<SiTailwindcss />} theme={"blue-sky"} title={"Tailwind"}/>
         <Badge logo={<SiRedux />} theme={"tomato"} title={"Redux"}/>
+        <Badge logo={<FiFigma />} theme={"green"} title={"Figma"}/>
       </div>
 
 
-      <div className="design">
+      {/* <div className="design">
         <Badge logo={<FiFigma />} theme={"green"} title={"Figma"}/>
         <Badge logo={<SiAdobephotoshop />} theme={"purple"} title={"Photoshop"}/>
-      </div>
+      </div> */}
 
     </div>
     </div>

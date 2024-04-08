@@ -8,22 +8,13 @@
   right: 30px;
   top: 50px;
 
-  .nav-menus {
-    scale: 0;
-    opacity: 0;
-    transition: 0.2s;
-    background-color: var(--bg);
-    padding: 5px;
-    padding-left: 30px;
-    border-radius: 10px;
-
-    &.active {
-      scale: 1;
-      opacity: 1;
-      cursor: pointer;
-    }
+  .menu {
+    height: fit-content;
+    width: fit-content;
+    display: flex;
     ul {
       display: flex;
+      width: fit-content;
 
       li {
         margin-right: 30px;
@@ -31,14 +22,33 @@
         font-size: 1.2rem;
       }
     }
+  }
 
-    .one {
+  .nav-menus {
+    display: flex;
+    scale: 0;
+    opacity: 0;
+    transition: 0.2s;
+    background-color: var(--bg);
+    padding: 5px;
+    padding-left: 30px;
+    border-radius: 10px;
+    display: none;
+    position: absolute;
+    top: 7px;
+    left: -435px;
+
+    &.active {
+      scale: 1;
+      opacity: 1;
+      display: flex;
+      cursor: pointer;
     }
-    .two {
-    }
-    .three {
-    }
-    .four {
+
+    .link {
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
@@ -63,6 +73,7 @@
     span {
       margin: -10px auto;
       font-size: 1.5rem;
+      text-decoration: none;
     }
   }
 

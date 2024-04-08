@@ -1,21 +1,28 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { BackgroundBeams } from "../components/ui/background-beams";
 import { AiFillGithub } from "react-icons/ai";
 import { BsLinkedin } from "react-icons/bs";
-import { BsDownload } from "react-icons/bs";
 import { MdMail } from "react-icons/md";
 import Projets from "@/components/Projets";
 import ExpPassWord from "@/components/ExpPassWord";
 import Chifumi from "@/components/Chifumi";
 import Skills from "@/components/Skills";
 import Navbar from "@/components/Navbar";
+import { AiFillEye } from "react-icons/ai";
+import { CopyToClipboard } from "react-copy-to-clipboard";
+
+
+
 
 
 
 export default function Home() {
+  const[display, setDisplay] = useState(false)
 
-  useEffect(() => {
+  const texteOriginal = "victordupont1407@gamil.com";
+
+useEffect(() => {
   
     const handleScroll = () => {
      
@@ -31,45 +38,66 @@ export default function Home() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  
+const openPDFInNewWindow = () => {
+      window.open('/images/cv.pdf', '_blank');
+    }
+
+
+  const copyDisplay = ()=>{
+    setDisplay(true);
+
+    setTimeout(() => {
+      setDisplay(false);
+    }, 2000);
+  }
+
+  
   return (
     <>
       <div className="h-[58rem] w-full  relative  ">
         <Navbar/>
-        <section className="about">
+        <section className="about" id="about">
           <div className="container">
             {/* <MainPoints/> */}
             <h6>Hey ! I'm-</h6>
             <h1>Victor Dupont</h1>
             <p>
-              I'm looking for Lorem, ipsum dolor sit <br /> amet consectetur
-              adipisicing elit. Illum, ad
+            Student at Epitech, I am looking for an apprenticeship <br /> as a developer.
             </p>
             <div className="container-btn">
               <div className="btn">
                 <span className="logo-btn">
                   <AiFillGithub />
                 </span>
+                <a href="https://github.com/VictorDpnt" target="_blank">
                 Github
+                </a>
               </div>
-
+{/* 
               <div className="btn">
                 <span className="logo-btn">
                   <BsLinkedin />
                 </span>
                 Linkdin
-              </div>
-              <div className="btn">
+              </div> */}
+             
+              <div className="btn" onClick={()=> openPDFInNewWindow()}>
                 <span className="logo-btn">
-                  <BsDownload />
+                  <AiFillEye />
                 </span>
-                Download CV
+                Show CV
               </div>
-              <div className="btn">
-                <span className="logo-btn">
-                  <MdMail />
-                </span>
-                Contact
+              <CopyToClipboard text={"victordupont1407@gmail.com"}>
+              <div className="btn" onClick={copyDisplay} >
+              <span className="logo-btn" >
+              <MdMail />
+              </span>
+             victordupont1407@gmail.com
               </div>
+              </CopyToClipboard>
+              {display && <p className="copy">Copy !</p>}
             </div>
           </div>
           <div className="container-picture">
@@ -80,9 +108,9 @@ export default function Home() {
         </section>
         <BackgroundBeams />
       </div>
-      <div className="title-section">Main Projects</div>
+      <div className="title-section" id="main">Main Projects</div>
       <Projets />
-      <div className="title-section">Projects</div>
+      <div className="title-section" id="exp">Experiences</div>
       <div className="experience"> 
         <div className="experience-center">
           <ExpPassWord />
@@ -90,9 +118,9 @@ export default function Home() {
           {/* <BubbleShooter /> */}
         </div>
       </div>
-      <div className="title-section">Skills</div>
+      <div className="title-section" id="skills">Skills</div>
       <Skills/>
-      <div className="title-section ">Contact</div>
+      {/* <div className="title-section ">Contact</div> */}
     </>
   );
 }

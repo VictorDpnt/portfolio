@@ -16,17 +16,23 @@
   }
   .skills-container {
     width: 80%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     justify-content: center;
     align-items: center;
-    justify-items: center;
     margin-top: 50px;
     margin-bottom: 130px;
+    // display: grid;
+    // grid-template-columns: 1fr 1fr;
+    // justify-content: center;
+    // align-items: center;
+    // justify-items: center;
+    // margin-top: 50px;
+    // margin-bottom: 130px;
 
     .dev {
+      margin-top: 10px;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       height: 350px;
     }
 

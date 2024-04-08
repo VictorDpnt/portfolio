@@ -11,18 +11,18 @@ const Navbar = () => {
 
   const [menu, setMenu]= useState(false)
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
 
   return (
-    <div className="navbar-container" onMouseEnter={()=>{setMenu(true)}} onMouseLeave={()=> setMenu(false)}>
-      <div className={menu ? "nav-menus active" : "nav-menus"}>
-      <ul>
-        <li className="one">About</li>
-        <li className='two'>Projects</li>
-        <li className='three'>Skills</li>
-        <li className='four'>Contact</li>
-      </ul>
-      </div>
-      <div className="logo-nav" >
+    <div className="navbar-container" >
+      <div className="menu">
+        <ul onMouseEnter={()=>{setMenu(true)}} onMouseLeave={()=> setMenu(false)}>
+          <li><div className="logo-nav" >
       <div className=" lines line-1">
         <span className='first'>■</span>
         <span className='seconde'>■</span>
@@ -39,8 +39,19 @@ const Navbar = () => {
         <span className='last'>■</span>
       </div>
       </div>
+            <ul className={menu ? "nav-menus active" : "nav-menus"}>
+            <li className="link" onClick={scrollToTop}>About</li>
+            <a href="#main"><li className='link'>Projects</li></a>
+            <a href="#exp"><li className='link'>Experiences</li></a>
+            <a href="#skills"><li className='link'>Skills</li></a>
+            
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
   )
 }
 
 export default Navbar
+
