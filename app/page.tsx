@@ -10,7 +10,7 @@ import Chifumi from "@/components/Chifumi";
 import Skills from "@/components/Skills";
 import Navbar from "@/components/Navbar";
 import { AiFillEye } from "react-icons/ai";
-import { CopyToClipboard } from "react-copy-to-clipboard";
+// import { CopyToClipboard } from "react-copy-to-clipboard";
 
 
 
@@ -23,25 +23,25 @@ export default function Home() {
   const texteOriginal = "victordupont1407@gamil.com";
 
 useEffect(() => {
-  
+
     const handleScroll = () => {
-     
+
       const scrollTop: number = window.scrollY || document.documentElement.scrollTop;
       console.log(scrollTop);
     };
 
-   
+
     window.addEventListener('scroll', handleScroll);
 
-   
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
-  
+
 const openPDFInNewWindow = () => {
-      window.open('/images/cv.pdf', '_blank');
+      window.open('/images/Cv dev FullStack.pdf', '_blank');
     }
 
 
@@ -53,7 +53,7 @@ const openPDFInNewWindow = () => {
     }, 2000);
   }
 
-  
+
   return (
     <>
       <div className="h-[58rem] w-full  relative  ">
@@ -61,7 +61,7 @@ const openPDFInNewWindow = () => {
         <section className="about" id="about">
           <div className="container">
             {/* <MainPoints/> */}
-            <h6>Hey ! I'm-</h6>
+
             <h1>Victor Dupont</h1>
             <p>
             Student at Epitech, I am looking for an apprenticeship <br /> as a developer.
@@ -75,34 +75,35 @@ const openPDFInNewWindow = () => {
                 Github
                 </a>
               </div>
-{/* 
+{/*
               <div className="btn">
                 <span className="logo-btn">
                   <BsLinkedin />
                 </span>
                 Linkdin
               </div> */}
-             
+
               <div className="btn" onClick={()=> openPDFInNewWindow()}>
                 <span className="logo-btn">
                   <AiFillEye />
                 </span>
                 Show CV
               </div>
-              <CopyToClipboard text={"victordupont1407@gmail.com"}>
+              {/* <CopyToClipboard text={"victordupont1407@gmail.com"}>
               <div className="btn" onClick={copyDisplay} >
               <span className="logo-btn" >
               <MdMail />
               </span>
              victordupont1407@gmail.com
               </div>
-              </CopyToClipboard>
+              </CopyToClipboard> */}
               {display && <p className="copy">Copy !</p>}
             </div>
           </div>
           <div className="container-picture">
             <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.80] bg-red-500  blur-3xl" />
             <div className="picture"></div>
+            <img src="/images/Sujet.png" alt="" className="photo" />
             {/* <img src="" alt="" className="photo" /> */}
           </div>
         </section>
@@ -111,7 +112,7 @@ const openPDFInNewWindow = () => {
       <div className="title-section" id="main">Main Projects</div>
       <Projets />
       <div className="title-section" id="exp">Experiences</div>
-      <div className="experience"> 
+      <div className="experience">
         <div className="experience-center">
           <ExpPassWord />
           <Chifumi />

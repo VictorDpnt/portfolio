@@ -1,37 +1,36 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { PiCopyDuotone } from "react-icons/pi";
-import { CopyToClipboard } from "react-copy-to-clipboard";
+// import { CopyToClipboard } from "react-copy-to-clipboard";
 import { BsCheckAll } from "react-icons/bs";
 
-const ExpPassWord = () => {
-  const [valueRange, setValueRange] = useState("15");
-  const [btnMin, setBtnMin] = useState(true);
-  const [btnMaj, setBtnMaj] = useState(false);
-  const [btnNum, setBtnNum] = useState(false);
-  const [btnSym, setBtnSym] = useState(false);
-  const [copy, setCopy] = useState(false);
-
-  const [password, setPassword] = useState("");
+const ExpPassWord: React.FC = () => {
+  const [valueRange, setValueRange] = useState<string>("15");
+  const [btnMin, setBtnMin] = useState<boolean>(true);
+  const [btnMaj, setBtnMaj] = useState<boolean>(false);
+  const [btnNum, setBtnNum] = useState<boolean>(false);
+  const [btnSym, setBtnSym] = useState<boolean>(false);
+  const [copy, setCopy] = useState<boolean>(false);
+  const [password, setPassword] = useState<string>("");
 
   const generatePassword = () => {
     const dataLowercase = "azertyuiopqsdfghjklmwxcvbn";
     const dataUppercase = dataLowercase.toUpperCase();
     const dataNumbers = "0123456789";
     const dataSymbols = "@#&§!?/+=$€*£¨^;.,ùéèà";
-    const data = [];
+    const data: string[] = [];
 
     if (btnMin) {
-      data.push(...dataLowercase);
+      data.push(...dataLowercase.split(""));
     }
     if (btnMaj) {
-      data.push(...dataUppercase);
+      data.push(...dataUppercase.split(""));
     }
     if (btnNum) {
-      data.push(...dataNumbers);
+      data.push(...dataNumbers.split(""));
     }
     if (btnSym) {
-      data.push(...dataSymbols);
+      data.push(...dataSymbols.split(""));
     }
 
     if (data.length === 0) {
@@ -41,12 +40,11 @@ const ExpPassWord = () => {
 
     let newPassword = "";
 
-    for (let i = 0; i < valueRange; i++) {
+    for (let i = 0; i < parseInt(valueRange); i++) {
       newPassword += data[Math.floor(Math.random() * data.length)];
     }
 
     setPassword(newPassword);
-   
   };
 
   return (
@@ -61,6 +59,7 @@ const ExpPassWord = () => {
               className="input-range"
               min="4"
               max="24"
+              value={valueRange}
               onChange={(e) => setValueRange(e.target.value)}
             />
             <p className="value-range">{valueRange}</p>
@@ -96,8 +95,8 @@ const ExpPassWord = () => {
           </button>
           {password && (
             <div className="container-result">
-              <h3 className="the-password"> {password}</h3>
-              <CopyToClipboard
+              <h3 className="the-password">{password}</h3>
+              {/* <CopyToClipboard
                 text={password}
                 onCopy={() =>
                   setTimeout(() => {
@@ -108,7 +107,7 @@ const ExpPassWord = () => {
                 <div className="copy-logo" onClick={() => setCopy(true)}>
                   {copy ? <BsCheckAll /> : <PiCopyDuotone />}
                 </div>
-              </CopyToClipboard>
+              </CopyToClipboard> */}
             </div>
           )}
         </div>

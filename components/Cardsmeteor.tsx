@@ -6,7 +6,16 @@ import { FaRegEye } from "react-icons/fa6";
 import { IoLogoGithub } from "react-icons/io";
 import Points from "./Points";
 
-export function MeteorsDemo({ projet }) {
+interface Projet {
+  title: string;
+  description: string;
+  img: string;
+  link: string;
+  linkGithub: string;
+}
+
+
+export function MeteorsDemo({ projet }: { projet: Projet }) {
   const [overCard, letOverCard] = useState(false);
 
   return (
@@ -37,7 +46,7 @@ export function MeteorsDemo({ projet }) {
             </div>
           )}
 
-          
+
           {/* <Meteors number={20} /> */}
         </div>
       </a>

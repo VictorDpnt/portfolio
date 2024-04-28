@@ -109,9 +109,10 @@
     .photo {
       z-index: 11;
       position: absolute;
-      width: 300px;
-      height: 300px;
+      width: 650px;
+      height: 650px;
       object-fit: contain;
+      bottom: -200px;
     }
   }
 }

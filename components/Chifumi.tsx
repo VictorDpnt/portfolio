@@ -12,7 +12,7 @@ const Chifumi = () => {
   const [score, setScore] = useState({ player: 0, computer: 0 });
   const [win, setWin] = useState("");
 
-  const determineWinner = (player, computer) => {
+  const determineWinner = (player: string, computer: string) => {
     if (
       (player === "Rock" && computer === "Scissors") ||
       (player === "Paper" && computer === "Rock") ||
@@ -28,7 +28,7 @@ const Chifumi = () => {
     }
   };
 
-  const handleClick = (choice) => {
+  const handleClick = (choice: string) => {
     const computerChoice = getRandomChoice();
     setPlayerChoice(choice);
     setComputerChoice(computerChoice);
