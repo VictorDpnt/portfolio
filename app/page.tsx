@@ -10,7 +10,7 @@ import Chifumi from "@/components/Chifumi";
 import Skills from "@/components/Skills";
 import Navbar from "@/components/Navbar";
 import { AiFillEye } from "react-icons/ai";
-import { CopyToClipboard } from "react-copy-to-clipboard";
+// import { CopyToClipboard } from "react-copy-to-clipboard";
 
 
 
@@ -89,14 +89,14 @@ const openPDFInNewWindow = () => {
                 </span>
                 Show CV
               </div>
-              <CopyToClipboard text={"victordupont1407@gmail.com"}>
+              {/* <CopyToClipboard text={"victordupont1407@gmail.com"}>
               <div className="btn" onClick={copyDisplay} >
               <span className="logo-btn" >
               <MdMail />
               </span>
              victordupont1407@gmail.com
               </div>
-              </CopyToClipboard>
+              </CopyToClipboard> */}
               {display && <p className="copy">Copy !</p>}
             </div>
           </div>
