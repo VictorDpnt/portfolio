@@ -67,7 +67,11 @@ const ExpPassWord: React.FC = () => {
             <p className="value-range">{valueRange}</p>
           </div>
           <div className="choice-btn">
-            <Button
+            <button className={btnMin ? "btn active" : "btn"} onClick={() => setBtnMin(!btnMin)}>a-z</button>
+            <button className={btnMaj ? "btn active" : "btn"} onClick={() => setBtnMaj(!btnMaj)}>A-Z</button>
+            <button className={btnNum ? "btn active" : "btn"} onClick={() => setBtnNum(!btnNum)}>0-9</button>
+            <button className={btnSym ? "btn active" : "btn"} onClick={() => setBtnSym(!btnSym)}>!-?</button>
+            {/* <Button
               variant={btnMin ? "outline" : "default"}
               onClick={() => setBtnMin(!btnMin)}
             >
@@ -90,7 +94,7 @@ const ExpPassWord: React.FC = () => {
               onClick={() => setBtnSym(!btnSym)}
             >
               !-?
-            </Button>
+            </Button> */}
           </div>
           <button className="btn-generate" onClick={() => generatePassword()}>
             Generate

@@ -70,6 +70,23 @@
           button {
             margin: 0 5px;
           }
+          .btn{
+            background-color: #0A0A0A;
+            padding: 5px 13px;
+            border-radius: 5px;
+            border: 1px solid #12677E;
+            transition: 0.1s;
+
+            &:hover {
+              background-color: var(--element-interface-hover);
+              border: solid 1px var(--bordure-hover);
+            }
+
+            &.active{
+              background-color: #fffffff0;
+              color: #0B1A20;
+            }
+          }
         }
         .btn-generate {
           margin-top: 20px;
