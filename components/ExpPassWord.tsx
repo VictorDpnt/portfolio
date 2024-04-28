@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { PiCopyDuotone } from "react-icons/pi";
-// import { CopyToClipboard } from "react-copy-to-clipboard";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 import { BsCheckAll } from "react-icons/bs";
 
 const ExpPassWord: React.FC = () => {
@@ -96,7 +96,7 @@ const ExpPassWord: React.FC = () => {
           {password && (
             <div className="container-result">
               <h3 className="the-password">{password}</h3>
-              {/* <CopyToClipboard
+              <CopyToClipboard
                 text={password}
                 onCopy={() =>
                   setTimeout(() => {
@@ -107,7 +107,7 @@ const ExpPassWord: React.FC = () => {
                 <div className="copy-logo" onClick={() => setCopy(true)}>
                   {copy ? <BsCheckAll /> : <PiCopyDuotone />}
                 </div>
-              </CopyToClipboard> */}
+              </CopyToClipboard>
             </div>
           )}
         </div>
