@@ -9,6 +9,10 @@
   display: grid;
   grid-template-columns: 80% 20%;
 
+  @media screen and (max-width: 375px) {
+    display: flex;
+  }
+
   .container {
     position: relative;
     margin-top: 15px;
@@ -93,6 +97,10 @@
     justify-content: center;
     align-items: center;
     width: fit-content;
+
+    @media screen and (max-width: 375px) {
+      display: none;
+    }
 
     .picture {
       z-index: 10;

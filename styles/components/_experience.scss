@@ -35,6 +35,11 @@
         width: 320px;
         position: relative;
 
+        @media screen and (max-width: 375px) {
+          height: 210px;
+          width: 220px;
+        }
+
         &:hover {
           border: solid 1px var(--bordure-hover);
         }

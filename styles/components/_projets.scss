@@ -8,10 +8,16 @@
   .cards-container {
     position: relative;
     width: max-content;
-    margin: 7px;
-    width: 400px;
-    height: 200px;
+    margin: 10px 40px;
+    width: 500px;
+    height: 280px;
     cursor: pointer;
+
+    @media screen and (max-width: 375px) {
+      width: 300px;
+      height: 200px;
+      margin: 10px 10px;
+    }
 
     cursor: pointer;
     border-radius: 14px;
@@ -61,7 +67,7 @@
         .logo-card {
           display: flex;
           justify-content: space-around;
-          font-size: 2rem;
+          font-size: 2.5rem;
           width: 50%;
 
           .logo-1 {
@@ -105,7 +111,7 @@
         }
 
         p {
-          font-size: 0.9rem;
+          font-size: 1.1rem;
           animation: description 0.4s ease;
           padding: 3px;
 
@@ -136,7 +142,7 @@
 
       h1 {
         color: var(--text);
-        font-size: 1.2rem;
+        font-size: 1.6rem;
 
         transition: 0.1s;
         margin-right: 30px;
