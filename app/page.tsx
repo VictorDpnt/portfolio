@@ -41,7 +41,7 @@ useEffect(() => {
 
 
 const openPDFInNewWindow = () => {
-      window.open('/images/Cv dev FullStack.pdf', '_blank');
+      window.open('/images/CV Victor Dupont SFR.pdf', '_blank');
     }
 
 
