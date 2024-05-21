@@ -1,4 +1,10 @@
 import React from "react";
+import { GrReactjs } from "react-icons/gr";
+import { SiRedux } from "react-icons/si";
+import { DiSass } from "react-icons/di";
+import { SiRubyonrails } from "react-icons/si";
+import { FaBootstrap } from "react-icons/fa6";
+import { TbSql } from "react-icons/tb";
 import { MeteorsDemo } from "./Cardsmeteor";
 
 const Projets = () => {
@@ -10,6 +16,11 @@ const Projets = () => {
       img: "/images/mediamovie.png",
       link: "https://media-movie-app.netlify.app/",
       linkGithub: "https://github.com/VictorDpnt/MOVIE-APP",
+      logo: [
+        <GrReactjs className="logo-1" />,
+        <SiRedux className="logo-2" />,
+        <DiSass className="logo-3" />,
+      ],
     },
     {
       title: "CryptoWatch",
@@ -18,15 +29,25 @@ const Projets = () => {
       img: "/images/crypto.PNG",
       link: "https://cryptowatch-analyzer.netlify.app/",
       linkGithub: "https://github.com/VictorDpnt/Crypto-APP",
+      logo: [
+        <GrReactjs className="logo-1" />,
+        <SiRedux className="logo-2" />,
+        <DiSass className="logo-3" />,
+      ],
     },
-    // {
-    //   title: "INCONNU",
-    //   description:
-    //     "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae repellendus ipsam ea magnam. Exercitationem laudantium, adipisci ipsum voluptate nihil, magni quibusdam reprehenderit quod rem alias vel suscipit hic sequi commodi!",
-    //   img: "/images/mediamovie.png",
-    //   link: "https://cryptowatch-analyzer.netlify.app/",
-    //   linkGithub: "https://github.com/VictorDpnt/MOVIE-APP",
-    // },
+    {
+      title: "Animalib",
+      description:
+        "L'application est en cours de développement ! Celle-ci permettra aux utilisateurs de gérer : leurs rendez-vous, des fiches patients pour leurs animaux et d’accéder à un service de chat.",
+      img: "/images/animalib.png",
+      link: "https://github.com/VictorDpnt",
+      linkGithub: "https://github.com/VictorDpnt",
+      logo: [
+        <SiRubyonrails className="logo-1" />,
+        <TbSql className="logo-2" />,
+        <FaBootstrap className="logo-3" />,
+      ],
+    },
   ];
 
   return (

@@ -12,8 +12,8 @@ interface Projet {
   img: string;
   link: string;
   linkGithub: string;
+  logo: string;
 }
-
 
 export function MeteorsDemo({ projet }: { projet: Projet }) {
   const [overCard, letOverCard] = useState(false);
@@ -38,14 +38,16 @@ export function MeteorsDemo({ projet }: { projet: Projet }) {
               onMouseLeave={() => letOverCard(false)}
             >
               <div className="logo-card">
-                <GrReactjs className="logo-1" />
-                <SiRedux className="logo-2" />
-                <DiSass className="logo-3" />
+                {/* <GrReactjs className="logo-1" /> */}
+                {/* <SiRedux className="logo-2" /> */}
+                {/* <DiSass className="logo-3" /> */}
+                {projet.logo[0]}
+                {projet.logo[1]}
+                {projet.logo[2]}
               </div>
               <p>{projet.description}</p>
             </div>
           )}
-
 
           {/* <Meteors number={20} /> */}
         </div>

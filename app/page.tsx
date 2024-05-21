@@ -12,59 +12,49 @@ import Navbar from "@/components/Navbar";
 import { AiFillEye } from "react-icons/ai";
 // import { CopyToClipboard } from "react-copy-to-clipboard";
 
-
-
-
-
-
 export default function Home() {
-  const[display, setDisplay] = useState(false)
+  const [display, setDisplay] = useState(false);
 
   const texteOriginal = "victordupont1407@gamil.com";
 
-useEffect(() => {
-
+  useEffect(() => {
     const handleScroll = () => {
-
-      const scrollTop: number = window.scrollY || document.documentElement.scrollTop;
+      const scrollTop: number =
+        window.scrollY || document.documentElement.scrollTop;
       console.log(scrollTop);
     };
 
-
-    window.addEventListener('scroll', handleScroll);
-
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
+  const openPDFInNewWindow = () => {
+    window.open("/images/Victor Dupont CV.pdf", "_blank");
+  };
 
-const openPDFInNewWindow = () => {
-      window.open('/images/CV Victor Dupont SFR.pdf', '_blank');
-    }
-
-
-  const copyDisplay = ()=>{
+  const copyDisplay = () => {
     setDisplay(true);
 
     setTimeout(() => {
       setDisplay(false);
     }, 2000);
-  }
-
+  };
 
   return (
     <>
       <div className="h-[40rem] w-full  relative  ">
-        <Navbar/>
+        <Navbar />
         <section className="about" id="about">
           <div className="container">
             {/* <MainPoints/> */}
 
             <h1>Victor Dupont</h1>
             <p>
-            Student at Epitech, I am looking for an apprenticeship <br /> as a developer.
+              Student at Epitech, I am looking for an apprenticeship <br /> as a
+              developer.
             </p>
             <div className="container-btn">
               <div className="btn">
@@ -72,10 +62,10 @@ const openPDFInNewWindow = () => {
                   <AiFillGithub />
                 </span>
                 <a href="https://github.com/VictorDpnt" target="_blank">
-                Github
+                  Github
                 </a>
               </div>
-{/*
+              {/*
               <div className="btn">
                 <span className="logo-btn">
                   <BsLinkedin />
@@ -83,7 +73,7 @@ const openPDFInNewWindow = () => {
                 Linkdin
               </div> */}
 
-              <div className="btn" onClick={()=> openPDFInNewWindow()}>
+              <div className="btn" onClick={() => openPDFInNewWindow()}>
                 <span className="logo-btn">
                   <AiFillEye />
                 </span>
@@ -109,9 +99,13 @@ const openPDFInNewWindow = () => {
         </section>
         {/* <BackgroundBeams /> */}
       </div>
-      <div className="title-section" id="main">Main Projects</div>
+      <div className="title-section" id="main">
+        Main Projects
+      </div>
       <Projets />
-      <div className="title-section" id="exp">Experiences</div>
+      <div className="title-section" id="exp">
+        Experiences
+      </div>
       <div className="experience">
         <div className="experience-center">
           <ExpPassWord />
@@ -119,8 +113,10 @@ const openPDFInNewWindow = () => {
           {/* <BubbleShooter /> */}
         </div>
       </div>
-      <div className="title-section" id="skills">Skills</div>
-      <Skills/>
+      <div className="title-section" id="skills">
+        Skills
+      </div>
+      <Skills />
       {/* <div className="title-section ">Contact</div> */}
     </>
   );
