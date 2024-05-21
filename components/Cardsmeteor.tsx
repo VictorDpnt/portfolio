@@ -12,7 +12,7 @@ interface Projet {
   img: string;
   link: string;
   linkGithub: string;
-  logo: string;
+  logo: React.ReactElement[];
 }
 
 export function MeteorsDemo({ projet }: { projet: Projet }) {
