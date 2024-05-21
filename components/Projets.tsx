@@ -17,9 +17,9 @@ const Projets = () => {
       link: "https://media-movie-app.netlify.app/",
       linkGithub: "https://github.com/VictorDpnt/MOVIE-APP",
       logo: [
-        <GrReactjs className="logo-1" />,
-        <SiRedux className="logo-2" />,
-        <DiSass className="logo-3" />,
+        <GrReactjs className="logo-1" key="mediamovie-react" />,
+        <SiRedux className="logo-2" key="mediamovie-redux" />,
+        <DiSass className="logo-3" key="mediamovie-sass" />,
       ],
     },
     {
@@ -30,9 +30,9 @@ const Projets = () => {
       link: "https://cryptowatch-analyzer.netlify.app/",
       linkGithub: "https://github.com/VictorDpnt/Crypto-APP",
       logo: [
-        <GrReactjs className="logo-1" />,
-        <SiRedux className="logo-2" />,
-        <DiSass className="logo-3" />,
+        <GrReactjs className="logo-1" key="cryptowatch-react" />,
+        <SiRedux className="logo-2" key="cryptowatch-redux" />,
+        <DiSass className="logo-3" key="cryptowatch-sass" />,
       ],
     },
     {
@@ -43,9 +43,9 @@ const Projets = () => {
       link: "https://github.com/VictorDpnt",
       linkGithub: "https://github.com/VictorDpnt",
       logo: [
-        <SiRubyonrails className="logo-1" />,
-        <TbSql className="logo-2" />,
-        <FaBootstrap className="logo-3" />,
+        <SiRubyonrails className="logo-1" key="animalib-rails" />,
+        <TbSql className="logo-2" key="animalib-sql" />,
+        <FaBootstrap className="logo-3" key="animalib-bootstrap" />,
       ],
     },
   ];
